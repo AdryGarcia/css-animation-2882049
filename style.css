@@ -22,3 +22,68 @@ h2 {
   animation-delay: 5s;
   animation-fill-mode: backwards;
 }
+
+@keyframes move {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(900px);
+  }
+}
+
+/*********************** Robot ***********************/
+.robot {
+  animation-name: move;
+  animation-duration: 3s;
+  animation-fill-mode: forwards;
+  animation-timing-function: cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+@keyframes move {
+  100% {
+    transform: translateX(700%);
+  }
+}
+
+/********************** Typing ************************/
+
+@import url("https://fonts.googleapis.com/css2?family=Fira+Mono&display=swap");
+
+h1 {
+  animation: typing 3s steps(14), blinking 0.5s steps(1) infinite;
+  color: #433f55; /* background color */
+  font-family: "Fira Mono", monospace;
+  overflow: hidden;
+  border-right: 0.15em solid #ce2d4f;
+  white-space: nowrap;
+  margin: 0 auto;
+  letter-spacing: 0.15em;
+}
+
+@keyframes blinking {
+  0%,
+  100% {
+    border-color: transparent;
+  }
+  50% {
+    border-color: #ce2d4f;
+  }
+}
+
+@keyframes typing {
+  0% {
+    width: 0px;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+body {
+  padding-top: 5em;
+  background: #cfcfcf;
+  display: flex;
+  justify-content: center;
+}
+
+/********************** Typing ************************/
