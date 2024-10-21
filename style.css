@@ -90,4 +90,154 @@ body {
   justify-content: center;
 }
 
-/********************** new ************************/
+/********************** BINARYVILLE ************************/
+
+.cloud01 {
+  animation: float 25s linear infinite;
+}
+
+.cloud02 {
+  animation: float 30s 5s linear infinite backwards;
+}
+
+@keyframes float {
+  0% {
+    transform: translateX(-150px);
+  }
+  100% {
+    transform: translateX(820px);
+  }
+}
+
+/* Other styles  */
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.wrap {
+  width: 800px;
+  height: 650px;
+  overflow: hidden;
+  position: relative;
+}
+
+.city,
+.cloud {
+  position: absolute;
+}
+
+.city {
+  z-index: 100;
+}
+
+.cloud02 {
+  top: 76px;
+}
+.cloud01 {
+  top: 30px;
+}
+
+img.cloud {
+  width: 150px;
+}
+.city img {
+  width: 100%;
+}
+
+/****************** SANDWICH ***************/
+.sticker {
+  animation: rotate 10s linear infinite;
+  animation-play-state: paused;
+  transform-origin: center;
+}
+.sticker:hover {
+  animation-play-state: running;
+}
+@keyframes rotate {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+/* other styles */
+img {
+  width: 200px;
+  margin-top: 10px;
+}
+
+/******************** Branch: 03-03b ********************/
+
+h2 {
+  margin: 0;
+  font-size: 7em;
+  font-weight: 900;
+  text-align: center;
+  perspective: 1000px;
+  transform-style: preserve-3d;
+}
+
+@keyframes flipUp {
+  from {
+    transform: rotateX(90deg);
+  }
+  to {
+    transform: rotateX(0deg);
+  }
+}
+
+span {
+  animation: flipUp 1s cubic-bezier(0.34, 1.56, 0.64, 1) both;
+  transform-origin: 50% 70%;
+}
+
+span:nth-child(2) {
+  margin-right: 0.15em;
+  animation-delay: 0.2s;
+}
+
+span:nth-child(3) {
+  margin-right: 0.15em;
+  animation-delay: 0.4s;
+}
+
+span:nth-child(4) {
+  margin-right: 0.15em;
+  animation-delay: 0.6s;
+}
+
+span:nth-child(5) {
+  margin-right: 0.15em;
+  animation-delay: 0.8s;
+}
+
+span:nth-child(6) {
+  margin-right: 0.15em;
+  animation-delay: 1s;
+}
+
+span:nth-child(7) {
+  margin-right: 0.15em;
+  animation-delay: 1.2s;
+}
+
+/* other styles */
+
+@import url("https://fonts.googleapis.com/css2?family=Fira+Sans+Condensed:wght@900&display=swap");
+
+body {
+  font-family: "Fira Sans", sans-serif;
+  background: #2c333a;
+  margin-top: 8rem;
+  display: flex;
+  justify-content: center;
+}
+
+span {
+  display: inline-block;
+  color: #77c6bc;
+}
+
+span:nth-child(2n) {
+  color: #95b8cb;
+}
