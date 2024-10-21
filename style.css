@@ -1,4 +1,74 @@
-/*********************** Robot ***********************/
+/*********************** Branch 01-01b - Robot1 ***********************/
+.robot {
+  animation-name: move;
+  animation-duration: 3s;
+  animation-fill-mode: forwards;
+  animation-timing-function: cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+@keyframes move {
+  /* 0% {
+    transform: translateX(0);
+  }*/
+  100% {
+    transform: translateX(700%);
+  }
+}
+
+/*********************** Branch 01-02b - Robot2 3d ***********************/
+
+body {
+  display: flex;
+  justify-content: center;
+  margin-top: 3em;
+  background-color: #6f7295;
+  perspective: 1000px;
+}
+
+.robot2 {
+  transform: translate3d(100px, 200px, -100px);
+}
+
+.wrap {
+  width: 100%;
+}
+
+img {
+  width: 300px;
+}
+
+/*********************** Branch 01-03b - Button ***********************/
+
+@import url(https://fonts.googleapis.com/css?family=Lato:300,400,700);
+
+button:hover {
+  transform: scale(1.3);
+  background: #aea8d3;
+  color: #353535;
+  cursor: pointer;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  background: #989898;
+  margin-top: 6rem;
+  display: flex;
+}
+
+button {
+  transition: background 0.3s ease-in, transform 0.2s 0.1s ease-in-out,
+    border-radius 0.3s ease-in;
+  border: 3px solid #aea8d3;
+  margin: 30px auto 0;
+  padding: 14px 15px;
+  color: #fff;
+  background: #b0b0b0;
+  width: 200px;
+  font-size: 1rem;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+/*********************** Branch 02-01b - Hello ***********************/
 
 @keyframes scaleIn {
   0% {
@@ -9,6 +79,16 @@
   }
   100% {
     transform: scale(1);
+  }
+}
+
+@keyframes wiggle {
+  50% {
+    transform: translate(10px) rotate(5deg);
+  }
+  0%,
+  100% {
+    transform: translate(-10px) rotate(-5deg);
   }
 }
 
@@ -36,26 +116,13 @@ h2 {
   }
 }
 
-/*********************** Robot ***********************/
-.robot {
-  animation-name: move;
-  animation-duration: 3s;
-  animation-fill-mode: forwards;
-  animation-timing-function: cubic-bezier(0.34, 1.56, 0.64, 1);
-}
-@keyframes move {
-  100% {
-    transform: translateX(700%);
-  }
-}
-
-/********************** Typing ************************/
+/*********************** Branch 02-06b - Typing ***********************/
 
 @import url("https://fonts.googleapis.com/css2?family=Fira+Mono&display=swap");
 
 h1 {
   animation: typing 3s steps(14), blinking 0.5s steps(1) infinite;
-  color: #433f55; /* background color */
+  color: #9e9ab3; /* background color */
   font-family: "Fira Mono", monospace;
   overflow: hidden;
   border-right: 0.15em solid #ce2d4f;
@@ -90,7 +157,7 @@ body {
   justify-content: center;
 }
 
-/********************** BINARYVILLE ************************/
+/*********************** Branch 03-01b - Binaryville ***********************/
 
 .cloud01 {
   animation: float 25s linear infinite;
@@ -146,7 +213,8 @@ img.cloud {
   width: 100%;
 }
 
-/****************** SANDWICH ***************/
+/*********************** Branch 03-02b - Sandwich ***********************/
+
 .sticker {
   animation: rotate 10s linear infinite;
   animation-play-state: paused;
@@ -166,7 +234,7 @@ img {
   margin-top: 10px;
 }
 
-/******************** Branch: 03-03b ********************/
+/******************** Branch: 03-03b inverse-letters********************/
 
 h2 {
   margin: 0;
@@ -244,7 +312,7 @@ span:nth-child(7) {
 
 body {
   font-family: "Fira Sans", sans-serif;
-  background: #2c333a;
+  background: #ededed;
   margin-top: 8rem;
   display: flex;
   justify-content: center;
